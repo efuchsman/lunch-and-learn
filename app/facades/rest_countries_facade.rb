@@ -7,6 +7,6 @@ class RestCountriesFacade
   end
 
   def self.random_country
-    self.all_countries.sample
+    self.all_countries.sample.name
   end
 end

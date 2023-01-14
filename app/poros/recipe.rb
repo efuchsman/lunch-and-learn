@@ -6,7 +6,7 @@ class Recipe
 
   def initialize(data, country)
     @title = data[:recipe][:label]
-    @url = data[:url]
+    @url = data[:recipe][:url]
     @image = data[:recipe][:image]
     @country = country.capitalize
   end

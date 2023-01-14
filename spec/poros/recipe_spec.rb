@@ -6,9 +6,9 @@ RSpec.describe Recipe do
     data = {
       recipe: {
         label: "Passport to Japan: Edamame, Gyoza, Rice and Teriyaki Beef",
-        image: "https://edamam-product-images.s3.amazonaws.com/web-img/237/2374bd7d348b32ba325739f8d9169119.jpeg"
-      },
-      url: "https://www.foodnetwork.com/recipes/rachael-ray/passport-to-japan-edamame-gyoza-rice-and-teriyaki-beef-recipe-2013871"
+        image: "https://edamam-product-images.s3.amazonaws.com/web-img/237/2374bd7d348b32ba325739f8d9169119.jpeg",
+        url: "https://www.foodnetwork.com/recipes/rachael-ray/passport-to-japan-edamame-gyoza-rice-and-teriyaki-beef-recipe-2013871"
+      }
     }
 
     recipe = Recipe.new(data, "japan")
