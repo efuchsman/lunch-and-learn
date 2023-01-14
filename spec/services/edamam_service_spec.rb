@@ -13,6 +13,11 @@ RSpec.describe EdamamService do
         country = "japan"
 
         expect(EdamamService.recipes_by_country(country)).to be_a Hash
+        expect(EdamamService.recipes_by_country(country)).to have_key :count
+        expect(EdamamService.recipes_by_country(country)[:count]).to be_a Integer
+
+        expect(EdamamService.recipes_by_country(country)).to have_key :hits
+        expect(EdamamService.recipes_by_country(country)[:hits]).to be_a Array
       end
     end
   end
