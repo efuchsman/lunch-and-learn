@@ -1,0 +1,19 @@
+require 'rails_helper'
+
+RSpec.describe RestCountriesFacade do
+  it 'exists' do
+    countries = RestCountriesFacade.new
+
+    expect(countries).to be_an_instance_of(RestCountriesFacade)
+  end
+
+  describe "Class Methods" do
+    describe "#all_countries" do
+      it "returns all countries as objects" do
+
+        expect(RestCountriesFacade.all_countries).to be_a Array
+        expect(RestCountriesFacade.all_countries.first).to be_a RestCountry
+      end
+    end
+  end
+end
