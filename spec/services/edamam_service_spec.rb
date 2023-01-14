@@ -1,1 +1,19 @@
 require 'rails_helper'
+
+RSpec.describe EdamamService do
+  it "exists" do
+    edmam = EdamamService.new
+
+    expect(edmam).to be_an_instance_of(EdamamService)
+  end
+
+  describe "Class Methods" do
+    describe "#recipes_by_country" do
+      it "displays recipes for a given country" do
+        country = "japan"
+
+        expect(EdamamService.recipes_by_country(country)).to be_a Hash
+      end
+    end
+  end
+end

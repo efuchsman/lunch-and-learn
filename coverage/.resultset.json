@@ -211,52 +211,25 @@
           null
         ]
       },
-      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/facades/rest_countries_facade.rb": {
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/services/edamam_service.rb": {
         "lines": [
           1,
           null,
           1,
-          3,
-          750,
+          1,
+          1,
+          1,
           null,
           null,
           null,
           1,
           1,
-          null,
-          null
-        ]
-      },
-      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/services/rest_countries_service.rb": {
-        "lines": [
           1,
-          null,
-          1,
-          3,
-          null,
-          null,
-          1,
-          3,
-          3,
-          null,
-          null
-        ]
-      },
-      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/poros/rest_country.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          750,
-          750,
           null,
           null
         ]
       }
     },
-    "timestamp": 1673656870
+    "timestamp": 1673667807
   }
 }

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-13T17:41:10-07:00">2023-01-13T17:41:10-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-13T20:43:27-07:00">2023-01-13T20:43:27-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,8 +29,8 @@
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         42.76
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>15</b> files in total.
+    <b>13</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>54</b> relevant lines,
-    <span class="green"><b>54</b> lines covered</span> and
+    <b>45</b> relevant lines,
+    <span class="green"><b>45</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -71,35 +71,13 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#b7de0289bb6f0c5e8900bd2fdcf4ceaa14f326bc" class="src_link" title="app/facades/rest_countries_facade.rb">app/facades/rest_countries_facade.rb</a></td>
+            <td class="strong t-file__name"><a href="#90170bb4c52f5e16c328d5c51ead6dda84036922" class="src_link" title="app/services/edamam_service.rb">app/services/edamam_service.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">126.17</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#cdb4b05cdb72b0a4c26ce3ec0a2edf1015a5d801" class="src_link" title="app/poros/rest_country.rb">app/poros/rest_country.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">300.60</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#6974a56935fa3f4e01ef9844982eaa3627932d02" class="src_link" title="app/services/rest_countries_service.rb">app/services/rest_countries_service.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">2.00</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -252,9 +230,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="b7de0289bb6f0c5e8900bd2fdcf4ceaa14f326bc">
+        <div class="source_table" id="90170bb4c52f5e16c328d5c51ead6dda84036922">
   <div class="header">
-    <h3>app/facades/rest_countries_facade.rb</h3>
+    <h3>app/services/edamam_service.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -266,8 +244,8 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>8</b> relevant lines.
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -285,311 +263,7 @@
 
             
 
-            <code class="ruby">class RestCountriesFacade</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.all_countries</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="4">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    RestCountriesService.all_countries.map do | country |</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="750" data-linenumber="5">
-            <span class="hits">750</span>
-            
-
-            
-
-            <code class="ruby">      RestCountry.new(country)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.random_country</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    self.all_countries.sample</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="cdb4b05cdb72b0a4c26ce3ec0a2edf1015a5d801">
-  <div class="header">
-    <h3>app/poros/rest_country.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class RestCountry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  attr_reader :name,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby">              :capital</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def initialize(data)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="750" data-linenumber="7">
-            <span class="hits">750</span>
-            
-
-            
-
-            <code class="ruby">    @name = data[:name][:official]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="750" data-linenumber="8">
-            <span class="hits">750</span>
-            
-
-            
-
-            <code class="ruby">    @capital = data[:capital][0]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="6974a56935fa3f4e01ef9844982eaa3627932d02">
-  <div class="header">
-    <h3>app/services/rest_countries_service.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class RestCountriesService</code>
+            <code class="ruby">class EdamamService</code>
           </li>
         </div>
       
@@ -616,18 +290,51 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="4">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    Faraday.new(&quot;https://restcountries.com&quot;)</code>
+            <code class="ruby">    Faraday.new(&quot;https://api.edamam.com&quot;) do |f|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      f.headers[&#39;app_id&#39;] = ENV[&#39;edamam_app_id&#39;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      f.headers[&#39;app_key&#39;] = ENV[&#39;edamam_api_key&#39;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -638,7 +345,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -649,30 +356,30 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="10">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def self.all_countries</code>
+            <code class="ruby">  def self.recipes_by_country(country)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="8">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    response = conn.get(&quot;/v3.1/all?fields=name&quot;)</code>
+            <code class="ruby">    response = conn.get(&quot;/api/recipes/v2?type=public?q=#{country.capitalize}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="9">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
             
@@ -682,7 +389,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -693,7 +400,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
