@@ -5,4 +5,8 @@ class RestCountriesFacade
       RestCountry.new(country)
     end
   end
+
+  def self.random_country
+    self.all_countries.sample
+  end
 end

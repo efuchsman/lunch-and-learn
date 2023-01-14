@@ -15,5 +15,12 @@ RSpec.describe RestCountriesFacade do
         expect(RestCountriesFacade.all_countries.first).to be_a RestCountry
       end
     end
+
+    describe "#random_country" do
+      it "selects a random country" do
+
+        expect(RestCountriesFacade.random_country).to be_a RestCountry
+      end
+    end
   end
 end
