@@ -18,6 +18,7 @@ RSpec.describe EdamamService do
 
         expect(EdamamService.recipes_by_country(country)).to have_key :hits
         expect(EdamamService.recipes_by_country(country)[:hits]).to be_a Array
+        expect(EdamamService.recipes_by_country(country)[:hits].first).to have_key :recipe
       end
     end
   end

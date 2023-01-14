@@ -208,25 +208,31 @@
         "lines": [
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/services/edamam_service.rb": {
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/poros/recipe.rb": {
         "lines": [
           1,
+          1,
+          null,
+          null,
           null,
           1,
-          5,
-          null,
-          null,
           1,
-          5,
-          5,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1673668396
+    "timestamp": 1673727153
   }
 }
