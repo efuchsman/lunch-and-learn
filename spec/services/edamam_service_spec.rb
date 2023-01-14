@@ -9,7 +9,7 @@ RSpec.describe EdamamService do
 
   describe "Class Methods" do
     describe "#recipes_by_country" do
-      it "displays recipes for a given country" do
+      it "displays recipes for a given country", :vcr do
         country = "japan"
 
         expect(EdamamService.recipes_by_country(country)).to be_a Hash

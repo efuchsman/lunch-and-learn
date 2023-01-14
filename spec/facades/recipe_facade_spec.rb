@@ -9,7 +9,7 @@ RSpec.describe RecipeFacade do
 
   describe "Class Methods" do
     describe "#recipes_by_country" do
-      it "creates recipe objects from recipes based on a given country" do
+      it "creates recipe objects from recipes based on a given country", :vcr do
 
         expect(RecipeFacade.recipes_by_country("japan")).to be_a Array
         expect(RecipeFacade.recipes_by_country("japan").first).to be_a Recipe
