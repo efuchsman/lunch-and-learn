@@ -17,6 +17,16 @@ RSpec.describe RecipeFacade do
         expect(RecipeFacade.recipes_by_country("japan")).to be_a Array
         expect(RecipeFacade.recipes_by_country("japan").first).to be_a Recipe
       end
+
+      describe "If there have been too many API calls" do
+        it "returns 'Usage limits are exceeded'" do
+          json_response = File.read('spec/fixtures/DO_NOT_DELETE/edamam_error.json')
+          stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['edamam_app_id']}&app_key=#{ENV['edamam_api_key']}&q=Japan&type=public").to_return(status: 404, body: json_response)
+
+          expect(RecipeFacade.recipes_by_country("japan")).to be_a String
+          expect(RecipeFacade.recipes_by_country("japan")).to eq("Usage limits are exceeded")
+        end
+      end
     end
   end
 end

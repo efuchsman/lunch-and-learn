@@ -60,22 +60,30 @@ RSpec.describe "Recipes API" do
 
     describe "When the user slams too many api calls with the country provided" do
       it "returns an error telling them to wait" do
-        json_response = File.read("./spec/fixtures/DO_NOT_DELETE/too_many_calls.json")
-          stub_request(:get, "http://localhost:3000/api/v1/recipes?country=Taiwan").to_return(status: 404, body: json_response)
-          json = JSON.parse(json_response, symbolize_names: true)
+        json_response = File.read("./spec/fixtures/DO_NOT_DELETE/edamam_error.json")
+        stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['edamam_app_id']}&app_key=#{ENV['edamam_api_key']}&q=Japan&type=public").to_return(status: 404, body: json_response)
 
-          expect(json).to be_a Hash
-          expect(json).to have_key :error
-          expect(json[:error]).to be_a String
-          expect(json[:error]).to eq("Too Many API calls. Please Wait A Minute Before Trying Again")
+        get "/api/v1/recipes?country=japan"
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+
+        expect(json).to be_a Hash
+        expect(json).to have_key :error
+        expect(json[:error]).to be_a String
+        expect(json[:error]).to eq("Too Many API calls. Please Wait A Minute Before Trying Again")
       end
     end
 
     describe "When the user does not provide a country" do
       it "returns recipes for a random country if recipes exist" do
-        json_response = File.read("./spec/fixtures/DO_NOT_DELETE/random_recipes.json")
-        stub_request(:get, "http://localhost:3000/api/v1/recipes").to_return(status: 200, body: json_response)
-        json = JSON.parse(json_response, symbolize_names: true)
+        json_response = File.read("./spec/fixtures/DO_NOT_DELETE/japan.json")
+        json_parsed = JSON.parse(json_response, symbolize_names: true)
+        allow(EdamamService).to receive(:recipes_by_country).and_return(json_parsed)
+
+        get "/api/v1/recipes"
+        json = JSON.parse(response.body, symbolize_names: true)
+
 
         expect(json).to be_a Hash
         expect(json).to have_key :data
@@ -103,14 +111,29 @@ RSpec.describe "Recipes API" do
 
       describe "When the Edamam rate limit per minute gets triggered from a random search" do
         it "Provides an error and suggests the user provides their own country param" do
-          json_response = File.read("./spec/fixtures/DO_NOT_DELETE/too_many_random_calls.json")
-          stub_request(:get, "http://localhost:3000/api/v1/recipes").to_return(status: 404, body: json_response)
-          json = JSON.parse(json_response, symbolize_names: true)
+          allow(RecipeFacade).to receive(:recipes_by_country).and_return("Usage limits are exceeded")
+
+          get "/api/v1/recipes"
+          json = JSON.parse(response.body, symbolize_names: true)
 
           expect(json).to be_a Hash
           expect(json).to have_key :error
           expect(json[:error]).to be_a String
           expect(json[:error]).to eq("Too Many API calls. Please Wait A Minute Before Trying Again. It Is Strongly Suggested That A User Provides A Country Parameter For Optimal Performance.")
+        end
+      end
+
+      describe "WHen the user does not provide a country and the random country does not have recipes" do
+        it "returns a no recipes message" do
+          allow(RecipeFacade).to receive(:recipes_by_country).and_return([])
+
+          get "/api/v1/recipes"
+          json = JSON.parse(response.body, symbolize_names: true)
+
+          expect(json).to be_a Hash
+          expect(json).to have_key :data
+          expect(json[:data]).to be_a String
+          expect(json[:data]).to eq("You Have Opted For A Random Country But There Are Currently No Recipes For This Country. It Is Strongly Suggested That A User Provides A Country Parameter For Optimal Performance.")
         end
       end
     end

@@ -13,7 +13,7 @@ class Api::V1::RecipesController < ApplicationController
       end
     end
 
-    if country.blank? || country.nil?
+    if country.blank?
       recipes = RecipeFacade.recipes_by_country(RestCountriesFacade.random_country.name)
       if recipes.blank?
         render json: { data: "You Have Opted For A Random Country But There Are Currently No Recipes For This Country. It Is Strongly Suggested That A User Provides A Country Parameter For Optimal Performance." }
