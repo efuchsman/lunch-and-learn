@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "id": null,
+      "type": "recipe",
+      "attributes": {
+        "title": "Vermouth Cocktail Recipe",
+        "url": "http://www.seriouseats.com/recipes/2011/01/vermouth-cocktail-recipe.html",
+        "country": "Country of curaçao",
+        "image": "https://edamam-product-images.s3.amazonaws.com/web-img/b5f/b5f1c16f0e8a0b3144c3b1b00fcc2567.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIESOuMeh74aNJ09NQUodzS3SE3fwmvoaETmkqlK6Z7rlAiEAip8KaeSRr0i4T1Ql1C5YhGWMm87%2BlobqPzb3vjVdlgsq1QQI%2Bf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDGmDFbEbHaUNz%2Bf8ECqpBKg4szx3Avn4MdLNtrEIuyptrsvzg7BRZ%2BzQVXVM8%2B8UwinjSeRQh5QKvmFFangO6X0qxjAu%2BWWJ9LThKZTJbNJDsNv4bJHFoyEwqLS%2BdCysvHU5%2BiVIQ087w1oCYOnqZyBR9G%2BAQjD6j7K%2FRctx4AoWKIuxxplEloKRw4da9iUNkTsLNBD4dnWzU0V7hz%2FQ%2Bez1COY4Kip6kdwzMx5ZgVdUEtPTv3fcmjTxy%2Fcmn1KAhi%2FZqeLjK3fwdhrQ1bQBDqsyPZQvQ6zWre6tSw8sIUQpWoJs9XSiXXk76QpFn%2BO61TcUYOVsD%2FIOvvzQwMPMWeN8qM1K88L49NVn2i9tF8lUz17llusJP0mF14Wb%2FnqzkpipRycBm8CX0UAN7%2BH4kNoXv2mPhMFsZS84tvXogHeaRUYSYU1jJROn%2B%2Bt%2B6GCEuknzj93LF06JW2G%2FSL3iVRFywUuu3%2BButGQbDTGWxVudBMLZbCWJoYQ1Po4ZI3OE%2Br8J4LA0l52BX5DY3ABuPvPvAJhNQppLTAae4MVI1J3pozZreCrW674BQ%2FDTrRKTzkHBp9VTCbYLGkoMdIjPGgGNOkW3Mt0lIYcbtASFKbFYewf7VbuU33SIACAoow0Y6BWfiDD5qRv7059%2BlyWW7ngPJth82aPk1FhYhTw77CwrIefildPkDT5I7FuJ9hD2Awri5czmi%2B6SRsuhhmB%2FACcgpz3PLb6okbRn1zV1nIDXnLQWU6W8LyYw%2F%2FKMngY6qQHeU9XbnzsBKyFJlA4UcZpa0p5yKjnBm51f6VVF7LGbgEi4AvN1knDmh9oIzh8RCIK0v%2BTyjX%2Bv3J%2B%2FGqGzUuDPmPJQBankBrBAqM3NaXL3KQbhqEMzXPwzwqbtUClz8uWvb339skLaRe9Mju3ETdfq0p6tw8yV86NmgZ2OHruozr7lyLLcDomm7jZSjHyb0CvIaaPkqJirpBRKVLA%2Fy6lNiPuhuE0Yx0yi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230114T235600Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFPBKRPHJW%2F20230114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=de5094cbb0ef380d56d40135b4b2882a66daa0678faf04164209477c77f8baf2"
+      }
+    },
+    {
+      "id": null,
+      "type": "recipe",
+      "attributes": {
+        "title": "Mai Tai",
+        "url": "https://www.epicurious.com/recipes/food/views/mai-tai-51172000",
+        "country": "Country of curaçao",
+        "image": "https://edamam-product-images.s3.amazonaws.com/web-img/4db/4db61c7e0deb6f8ac2873ba72991665d.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIESOuMeh74aNJ09NQUodzS3SE3fwmvoaETmkqlK6Z7rlAiEAip8KaeSRr0i4T1Ql1C5YhGWMm87%2BlobqPzb3vjVdlgsq1QQI%2Bf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDGmDFbEbHaUNz%2Bf8ECqpBKg4szx3Avn4MdLNtrEIuyptrsvzg7BRZ%2BzQVXVM8%2B8UwinjSeRQh5QKvmFFangO6X0qxjAu%2BWWJ9LThKZTJbNJDsNv4bJHFoyEwqLS%2BdCysvHU5%2BiVIQ087w1oCYOnqZyBR9G%2BAQjD6j7K%2FRctx4AoWKIuxxplEloKRw4da9iUNkTsLNBD4dnWzU0V7hz%2FQ%2Bez1COY4Kip6kdwzMx5ZgVdUEtPTv3fcmjTxy%2Fcmn1KAhi%2FZqeLjK3fwdhrQ1bQBDqsyPZQvQ6zWre6tSw8sIUQpWoJs9XSiXXk76QpFn%2BO61TcUYOVsD%2FIOvvzQwMPMWeN8qM1K88L49NVn2i9tF8lUz17llusJP0mF14Wb%2FnqzkpipRycBm8CX0UAN7%2BH4kNoXv2mPhMFsZS84tvXogHeaRUYSYU1jJROn%2B%2Bt%2B6GCEuknzj93LF06JW2G%2FSL3iVRFywUuu3%2BButGQbDTGWxVudBMLZbCWJoYQ1Po4ZI3OE%2Br8J4LA0l52BX5DY3ABuPvPvAJhNQppLTAae4MVI1J3pozZreCrW674BQ%2FDTrRKTzkHBp9VTCbYLGkoMdIjPGgGNOkW3Mt0lIYcbtASFKbFYewf7VbuU33SIACAoow0Y6BWfiDD5qRv7059%2BlyWW7ngPJth82aPk1FhYhTw77CwrIefildPkDT5I7FuJ9hD2Awri5czmi%2B6SRsuhhmB%2FACcgpz3PLb6okbRn1zV1nIDXnLQWU6W8LyYw%2F%2FKMngY6qQHeU9XbnzsBKyFJlA4UcZpa0p5yKjnBm51f6VVF7LGbgEi4AvN1knDmh9oIzh8RCIK0v%2BTyjX%2Bv3J%2B%2FGqGzUuDPmPJQBankBrBAqM3NaXL3KQbhqEMzXPwzwqbtUClz8uWvb339skLaRe9Mju3ETdfq0p6tw8yV86NmgZ2OHruozr7lyLLcDomm7jZSjHyb0CvIaaPkqJirpBRKVLA%2Fy6lNiPuhuE0Yx0yi&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230114T235600Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFPBKRPHJW%2F20230114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=388439d04c6dcab000d143994ba73e67627e31b5dce85fa6ed57f5b1b060d7e7"
+      }
+    }
+  ]
+}

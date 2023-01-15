@@ -8,5 +8,4 @@ class RestCountriesService
     response = conn.get("/v3.1/all?fields=name")
     JSON.parse(response.body, symbolize_names: true)
   end
-
 end
