@@ -30,7 +30,9 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data('app_key') { ENV['edamam_api_key'] }
   config.filter_sensitive_data('app_id') { ENV['edamam_app_id'] }
-  config.default_cassette_options = { re_record_interval: 10.days }
+  config.filter_sensitive_data('key') { ENV['YOUTUBE_API_KEY'] }
+  config.filter_sensitive_data('channelId') { ENV['MR_HISTORY_ID'] }
+  config.default_cassette_options = { record: :new_episodes }
   config.configure_rspec_metadata!
   config.allow_http_connections_when_no_cassette = true
 end
