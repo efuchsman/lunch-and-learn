@@ -4,6 +4,9 @@ RSpec.describe "Recipes API" do
   describe "GET /recipes?country"  do
     describe "When the record exists" do
       it 'returns recipes for a country' do
+        json_response = File.read('spec/fixtures/DO_NOT_DELETE/japan.json')
+        stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['edamam_app_id']}&app_key=#{ENV['edamam_api_key']}&q=Japan&type=public").to_return(status: 200, body: json_response)
+
         get "/api/v1/recipes?country=Japan"
 
         json = JSON.parse(response.body, symbolize_names: true)
@@ -37,6 +40,9 @@ RSpec.describe "Recipes API" do
 
     describe "When there are no recipes for a country" do
       it "returns a hash with no current recipes" do
+        json_response = File.read('spec/fixtures/DO_NOT_DELETE/somalia.json')
+        stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['edamam_app_id']}&app_key=#{ENV['edamam_api_key']}&q=Somalia&type=public").to_return(status: 200, body: json_response)
+
         get "/api/v1/recipes?country=somalia"
 
         json = JSON.parse(response.body, symbolize_names: true)

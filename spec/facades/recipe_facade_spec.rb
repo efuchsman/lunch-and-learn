@@ -10,6 +10,9 @@ RSpec.describe RecipeFacade do
   describe "Class Methods" do
     describe "#recipes_by_country" do
       it "creates recipe objects from recipes based on a given country" do
+        json_response = File.read('spec/fixtures/DO_NOT_DELETE/japan.json')
+        stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['edamam_app_id']}&app_key=#{ENV['edamam_api_key']}&q=Japan&type=public").to_return(status: 200, body: json_response)
+
 
         expect(RecipeFacade.recipes_by_country("japan")).to be_a Array
         expect(RecipeFacade.recipes_by_country("japan").first).to be_a Recipe

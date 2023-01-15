@@ -9,7 +9,8 @@ RSpec.describe RestCountriesFacade do
 
   describe "Class Methods" do
     describe "#all_countries" do
-      it "returns all countries as objects" do
+      it "returns all countries as objects", :vcr do
+
         countries = RestCountriesFacade.all_countries
 
         expect(countries).to be_a Array
@@ -18,7 +19,7 @@ RSpec.describe RestCountriesFacade do
     end
 
     describe "#random_country" do
-      it "selects a random country" do
+      it "selects a random country", :vcr do
 
         expect(RestCountriesFacade.random_country).to be_a RestCountry
       end
