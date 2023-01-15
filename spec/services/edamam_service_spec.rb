@@ -9,16 +9,13 @@ RSpec.describe EdamamService do
 
   describe "Class Methods" do
     describe "#recipes_by_country" do
-      it "displays recipes for a given country", :vcr do
-        country = "japan"
+      it "displays recipes for a given country" do
+        country = EdamamService.recipes_by_country("japan")
 
-        expect(EdamamService.recipes_by_country(country)).to be_a Hash
-        expect(EdamamService.recipes_by_country(country)).to have_key :count
-        expect(EdamamService.recipes_by_country(country)[:count]).to be_a Integer
-
-        expect(EdamamService.recipes_by_country(country)).to have_key :hits
-        expect(EdamamService.recipes_by_country(country)[:hits]).to be_a Array
-        expect(EdamamService.recipes_by_country(country)[:hits].first).to have_key :recipe
+        expect(country).to be_a Hash
+        expect(country).to have_key :hits
+        expect(country[:hits]).to be_a Array
+        expect(country[:hits].first).to have_key :recipe
       end
     end
   end

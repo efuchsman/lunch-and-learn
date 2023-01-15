@@ -10,7 +10,7 @@ RSpec.describe RestCountriesService do
 
   describe "Class Methods" do
     describe "#all_countries" do
-      it "returns all countries", :vcr do
+      it "returns all countries" do
 
         expect(RestCountriesService.all_countries).to be_a Array
         expect(RestCountriesService.all_countries.first).to have_key :name
