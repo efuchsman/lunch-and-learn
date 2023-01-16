@@ -1,10 +1,10 @@
 class Video
 
   attr_reader :title,
-              :video_id
+              :youtube_video_id
 
   def initialize(data)
     @title = data[:snippet][:title]
-    @video_id = data[:id][:videoId]
+    @youtube_video_id = data[:id][:videoId]
   end
 end

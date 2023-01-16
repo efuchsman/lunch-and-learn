@@ -13,7 +13,7 @@ RSpec.describe Video do
     }
 
     video = Video.new(data)
-    expect(video.video_id).to eq("blah")
+    expect(video.youtube_video_id).to eq("blah")
     expect(video.title).to eq("blah blah")
   end
 end

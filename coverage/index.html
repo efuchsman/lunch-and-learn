@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-15T18:00:13-07:00">2023-01-15T18:00:13-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-15T19:05:07-07:00">2023-01-15T19:05:07-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         12.75
+         12.72
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>371</b> relevant lines,
-    <span class="green"><b>371</b> lines covered</span> and
+    <b>372</b> relevant lines,
+    <span class="green"><b>372</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -370,9 +370,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#df74444c1aff7979654aefca1a30a2fee16fe55d" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -2157,7 +2157,7 @@
 
             
 
-            <code class="ruby">              :video_id</code>
+            <code class="ruby">              :youtube_video_id</code>
           </li>
         </div>
       
@@ -2201,7 +2201,7 @@
 
             
 
-            <code class="ruby">    @video_id = data[:id][:videoId]</code>
+            <code class="ruby">    @youtube_video_id = data[:id][:videoId]</code>
           </li>
         </div>
       
@@ -5041,8 +5041,8 @@
     
 
     <div class="t-line-summary">
-      <b>4</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5120,13 +5120,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      get &#39;/learning_resources&#39;, to: &#39;learning_resources#show&#39;</code>
           </li>
         </div>
       
@@ -5137,12 +5137,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -7277,7 +7288,7 @@
 
             
 
-            <code class="ruby">    expect(video.video_id).to eq(&quot;blah&quot;)</code>
+            <code class="ruby">    expect(video.youtube_video_id).to eq(&quot;blah&quot;)</code>
           </li>
         </div>
       
