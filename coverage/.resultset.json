@@ -214,6 +214,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null,
           null
@@ -369,11 +371,50 @@
           null
         ]
       },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/spec/models/favorite_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/models/favorite.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
           1,
+          1,
+          2,
+          null,
+          null,
           1,
           2,
           2,
@@ -398,22 +439,15 @@
       "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/models/user.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           1,
-          1,
-          1,
-          1,
+          15,
           null,
-          1,
-          12,
-          null,
-          null
-        ]
-      },
-      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
           null
         ]
       },
@@ -599,6 +633,162 @@
           1,
           16,
           16,
+          null,
+          null
+        ]
+      },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/spec/requests/favorites/get_index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/spec/requests/favorites/post_create_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null,
           null
         ]
@@ -1073,6 +1263,69 @@
           null
         ]
       },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/controllers/api/v1/favorites_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          6,
+          6,
+          1,
+          null,
+          5,
+          5,
+          4,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/serializers/favorite_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
       "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/controllers/api/v1/learning_resources_controller.rb": {
         "lines": [
           1,
@@ -1093,12 +1346,6 @@
           1,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/elifuchsman/Turing/mod3_directory/projects/lunch_and_learn/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       },
@@ -1184,6 +1431,6 @@
         ]
       }
     },
-    "timestamp": 1673897454
+    "timestamp": 1673906559
   }
 }
