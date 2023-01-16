@@ -8,5 +8,4 @@ class UnsplashService
     response = conn.get("search/photos?client_id=#{ENV['unsplash_access_key']}&query=#{country}")
     JSON.parse(response.body, symbolize_names: true)
   end
-
 end
