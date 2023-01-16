@@ -4,10 +4,10 @@ RSpec.describe "User API" do
   describe "POST /users" do
     describe "When the parameters are met and the email is unique" do
       it "creates a new user" do
-        user = {
+        user = ({
           "name": "Athena Dao",
           "email": "athenadao@bestgirlever.com"
-        }
+        })
 
         post api_v1_users_path, params: user
 
