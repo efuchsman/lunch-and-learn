@@ -32,6 +32,7 @@ VCR.configure do |config|
   config.filter_sensitive_data('app_id') { ENV['edamam_app_id'] }
   config.filter_sensitive_data('key') { ENV['YOUTUBE_API_KEY'] }
   config.filter_sensitive_data('channelId') { ENV['MR_HISTORY_ID'] }
+  config.filter_sensitive_data('client_id') { ENV['unsplash_access_key'] }
   config.default_cassette_options = { record: :new_episodes }
   config.configure_rspec_metadata!
   config.allow_http_connections_when_no_cassette = true
