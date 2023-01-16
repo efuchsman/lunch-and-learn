@@ -61,7 +61,7 @@ RSpec.describe "Recipes API" do
     describe "When the user slams too many api calls with the country provided" do
       it "returns an error telling them to wait" do
         json_response = File.read("./spec/fixtures/DO_NOT_DELETE/edamam_error.json")
-        stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['edamam_app_id']}&app_key=#{ENV['edamam_api_key']}&q=Japan&type=public").to_return(status: 404, body: json_response)
+        stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['edamam_app_id']}&app_key=#{ENV['edamam_api_key']}&q=Japan&type=public").to_return(status: 429, body: json_response)
 
         get "/api/v1/recipes?country=japan"
 
