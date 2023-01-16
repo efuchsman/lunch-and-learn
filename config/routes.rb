@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get '/learning_resources', to: 'learning_resources#show'
       post '/users', to: 'users#create'
       post '/favorites', to: 'favorites#create'
+      get '/favorites', to: 'favorites#index'
     end
   end
 end
