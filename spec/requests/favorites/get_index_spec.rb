@@ -37,6 +37,26 @@ RSpec.describe "Favorites API" do
 
         expect(response).to be_successful
         expect(response).to have_http_status(200)
+
+        expect(json).to be_a Hash
+        expect(json).to have_key :data
+
+        expect(json[:data]).to be_a Array
+        expect(json[:data].first).to be_a Hash
+
+        expect(json[:data].first).to have_key :id
+        expect(json[:data].first).to have_key :type
+        expect(json[:data].first).to have_key :attributes
+
+        expect(json[:data].first[:id]).to be_a String
+        expect(json[:data].first[:type]).to be_a String
+        expect(json[:data].first[:attributes]).to be_a Hash
+
+        expect(json[:data].first[:attributes]).to have_key :recipe_title
+        expect(json[:data].first[:attributes]).to have_key :recipe_link
+        expect(json[:data].first[:attributes]).to have_key :country
+        expect(json[:data].first[:attributes]).to have_key :created_at
+
       end
     end
 
