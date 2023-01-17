@@ -4,7 +4,7 @@
   "count": 197,
   "_links": {
     "next": {
-      "href": "https://api.edamam.com/api/recipes/v2?q=Japan&app_key=775ba4de371a4273d68a9ab3c4299a79&_cont=CHcVQBtNNQphDmgVQ3tAEX4BYVBtBwMCSmJBBWMbZVBxBwcEUXlSAmMVMlB7BwIFFTdIUTNHZQAnVVcEQWBFVzARYwMhAFcVLnlSVSBMPkd5BgMbUSYRVTdgMgksRlpSAAcRXTVGcV84SU4%3D&type=public&app_id=267f1210",
+      "href": "https://api.edamam.com/api/recipes/v2?q=Japan&app_key=api_key&type=public&app_id=app_id",
       "title": "Next page"
     }
   },
