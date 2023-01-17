@@ -2,7 +2,6 @@
 
 <h1 align="center">Lunch and Learn</h1>
 
-<!-- PROJECT IMAGE -->
 <br />
 <div align="center">
   <a href="https://github.com/efuchsman/lunch-and-learn">
@@ -15,7 +14,43 @@
   </h3>
 </div>
 
-<!-- CONTACT -->
+## Table of Contents
+* [App Description](#app-description)
+* [Learning Goals](#learning-goals)
+* [System Requirements](#system-requirements)
+* [Setup](#setup)
+* [Respository](#repository)
+
+## App Description
+ This app allows users to search for recipes by country, favorite recipes, and learn more about a particular country.
+
+## Learning Goals
+* Expose an API that aggregates data from multiple external APIs
+* Expose an API that requires an authentication token
+* Expose an API for CRUD functionality
+* Determine completion criteria based on the needs of other developers
+* Test both API consumption and exposure, making use of at least one mocking tool (VCR, Webmock, etc).
+
+## System Requirements
+* Ruby 2.7.4
+* Rails 5.2.8
+
+## Repository
+https://github.com/efuchsman/lunch-and-learn
+
+## Setup
+1. Fork and Clone the repository
+2. Install gem packages: `bundle install`
+3. Setup Figaro: `bundle exec figaro install`
+4. Setup the database: `rails db:{drop,create,migrate,seed}`
+5. Sign up for an api key and app id through edamame: https://developer.edamam.com/edamam-recipe-api
+6. In application.yml: `edamam_api_key: <YOUR KEY> edamam_app_id: <YOUR ID>`
+7. Sign up for an api key for youtube: https://developers.google.com/youtube/v3/getting-started
+8. In application.yml: `YOUTUBE_API_KEY: <YOUR KEY>`
+9. Sign up for api key with Unsplash: https://unsplash.com/developers
+10. In application.yml: `unsplash_access_key: <YOUR KEY>`
+11. Run the server `rails s`
+
 ## Contact
 
 <table align="center">
