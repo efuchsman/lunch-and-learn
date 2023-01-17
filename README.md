@@ -105,6 +105,64 @@ https://github.com/efuchsman/lunch-and-learn
 }
 ```
 
+### GET /api/v1/learning_resources?country=scotland
+```
+{
+  "data": {
+      "id": null,
+      "type": "learning_resource",
+      "attributes": {
+          "country": "scotland",
+          "video": {
+          "title": "A Super Quick History of Northern Ireland",
+          "youtube_video_id": "IU0tzcgcb-Q"
+      },
+      "images": [
+          {
+              "alt_tag": "green grass on mountain under white cloudy sky",
+              "url": "https://images.unsplash.com/photo-1551801691-f0bce83d4f68?..."
+          },
+          {
+              "alt_tag": "gray concrete building near lake under white sky during daytime",
+              "url": "https://images.unsplash.com/photo-1589489873423-d1745278a8f4?..."
+          },
+          {
+              "alt_tag": "brown ox on mountain",
+              "url": "https://images.unsplash.com/photo-1493962853295-0fd70327578a?..."
+          },
+          {
+              "alt_tag": "bird's eye photography of winding road on mountain",
+              "url": "https://images.unsplash.com/photo-1476990789491-712b869b91a5?..."
+          },
+          {
+              "alt_tag": "brown mountain cliff beside of blue ocean aerial photography",
+              "url": "https://images.unsplash.com/photo-1524756614325-ab25ba59e6e6?..."
+          },
+          {
+              "alt_tag": "train on bridge surrounded with trees at daytime",
+              "url": "https://images.unsplash.com/photo-1505832018823-50331d70d237?..."
+          },
+          {
+              "alt_tag": "aerial photo of black train during daytime",
+              "url": "https://images.unsplash.com/photo-1571936804022-90d128047136?..."
+          },
+          {
+              "alt_tag": "people walking on sidewalk near red concrete building during daytime",
+              "url": "https://images.unsplash.com/photo-1594800083755-8fe31b2c99df?..."
+          },
+          {
+              "alt_tag": "brown concrete building",
+              "url": "https://images.unsplash.com/photo-1565011231598-66c1ec39b72c?..."
+          },
+          {
+              "alt_tag": "train passing by bridge over mountains",
+              "url": "https://images.unsplash.com/photo-1551801841-ecad875a5142?..."
+          }
+        ]
+      }
+    }
+  }
+```
 ## Contact
 
 <table align="center">
