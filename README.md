@@ -20,6 +20,7 @@
 * [System Requirements](#system-requirements)
 * [Setup](#setup)
 * [Respository](#repository)
+* [Endpoints](#endpoints)
 
 ## App Description
  This app allows users to search for recipes by country, favorite recipes, and learn more about a particular country.
@@ -49,7 +50,60 @@ https://github.com/efuchsman/lunch-and-learn
 8. In application.yml: `YOUTUBE_API_KEY: <YOUR KEY>`
 9. Sign up for api key with Unsplash: https://unsplash.com/developers
 10. In application.yml: `unsplash_access_key: <YOUR KEY>`
-11. Run the server `rails s`
+11. All 48 tests should be passing with 100% coverage: `bundle exec rspec`
+12. Run the server `rails s`
+
+## Endpoints
+
+### GET /api/v1/recipes?country=thailand
+
+```
+  {
+     "data": [
+        {
+          "id": null,
+          "type": "recipe",
+          "attributes": {
+          "title": "Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)",
+          "url": "https://www.seriouseats.com/recipes/2013/11/andy-rickers-naam-cheuam-naam-taan-piip-palm-sugar-simple-syrup.html",
+          "country": "Thailand",
+          "image": "https://edamam-product-images.s3.amazonaws.com/web-img/611/61165abc1c1c6a185fe5e67167d3e1f0.jpg?..."
+         }
+        },
+      {...},
+      {...},
+      ]
+  }
+```
+
+### GET /api/v1/recipes
+
+```
+{
+  "data": [
+    {
+      "id": null,
+      "type": "recipe",
+      "attributes": {
+        "title": "Vermouth Cocktail Recipe",
+        "url": "http://www.seriouseats.com/recipes/2011/01/vermouth-cocktail-recipe.html",
+        "country": "Country of curaçao",
+        "image": "https://edamam-product-images.s3.amazonaws.com/web-img/b5f/b5f1c16f0e8a0b3144c3b1b00fcc2567.jpg?..."
+      }
+    },
+    {
+      "id": null,
+      "type": "recipe",
+      "attributes": {
+        "title": "Mai Tai",
+        "url": "https://www.epicurious.com/recipes/food/views/mai-tai-51172000",
+        "country": "Country of curaçao",
+        "image": "https://edamam-product-images.s3.amazonaws.com/web-img/4db/4db61c7e0deb6f8ac2873ba72991665d.jpg?..."
+      }
+    }
+  ]
+}
+```
 
 ## Contact
 
