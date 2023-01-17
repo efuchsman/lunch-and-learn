@@ -5,7 +5,7 @@ class YoutubeService
   end
 
   def self.videos_of_country(country)
-    response = conn.get("/youtube/v3/search?part=snippet&channelId=#{ENV['MR_HISTORY_ID']}&q=#{country}&key=#{ENV['YOUTUBE_API_KEY']}")
+    response = conn.get("/youtube/v3/search?part=snippet&channelId=UCluQ5yInbeAkkeCndNnUhpw&q=#{country}&key=#{ENV['YOUTUBE_API_KEY']}")
     JSON.parse(response.body, symbolize_names: true)
   end
 end
