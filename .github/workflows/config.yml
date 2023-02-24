@@ -38,8 +38,8 @@ jobs:
           echo "RAILS_ENV=test" >> $GITHUB_ENV
           echo "DATABASE_URL=postgres://postgres:password@localhost:5432/app_test" >> $GITHUB_ENV
       - name: Create database
-        run: bin/rails db:create
+        run: rails db:create
       - name: Run database migrations
-        run: bin/rails db:migrate
+        run: rails db:migrate
       - name: Run tests
-        run: bin/rails test
+        run: bundle exec rspec
