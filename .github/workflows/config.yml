@@ -1,41 +1,45 @@
-# This workflow uses actions that are not certified by GitHub.  They are
-# provided by a third-party and are governed by separate terms of service,
-# privacy policy, and support documentation.
-#
-# This workflow will install a prebuilt Ruby version, install dependencies, and
-# run tests and linters.
-name: "Ruby on Rails CI"
+name: Ruby on Rails CI
+
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
+    branches: [main]
+
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:latest
-        ports:
-          - "5432:5432"
+        image: postgres: latest
         env:
-          POSTGRES_DB: lunch_and_learn_test
           POSTGRES_USER: postgres
-          POSTGRES_HOST_AUTH_METHOD: trust
-    env:
-      RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: lunch_and_learn_test
+        ports:
+          - 5432:5432
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-      # Add or replace dependency steps here
-      - name: Install Ruby and gems
-        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
+        uses: actions/checkout@v2
+      - name: Install Ruby and dependencies
+        uses: ruby/setup-ruby@v1
         with:
+          ruby-version: 2.7.4
           bundler-cache: true
-      # Add or replace database setup steps here
-      - name: Set up database schema
-        run: bin/rails db:schema:load
-      # Add or replace test runners here
+      - name: Install Node.js and Yarn
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+      - name: Install packages with Yarn
+        run: yarn install
+      - name: Setup environment variables
+        run: |
+          echo "RAILS_ENV=test" >> $GITHUB_ENV
+          echo "DATABASE_URL=postgres://postgres:password@localhost:5432/app_test" >> $GITHUB_ENV
+      - name: Create database
+        run: bin/rails db:create
+      - name: Run database migrations
+        run: bin/rails db:migrate
       - name: Run tests
-        run: bin/rake
+        run: bin/rails test
