@@ -25,6 +25,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.4
+          bundler-version: 2.2.11
           bundler-cache: true
       - name: Install Node.js and Yarn
         uses: actions/setup-node@v2
