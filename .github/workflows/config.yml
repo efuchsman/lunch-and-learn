@@ -1,46 +1,62 @@
-name: Ruby on Rails CI
+name: Build and Test
 
 on:
   push:
-    branches: [main]
-  pull_request:
     branches: [main]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:latest
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: password
+          POSTGRES_PASSWORD: postgres
           POSTGRES_DB: lunch_and_learn_test
         ports:
-          - 5432:5432
+          - 5432/tcp
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install Ruby and dependencies
-        uses: ruby/setup-ruby@v1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.6.1
         with:
-          ruby-version: 2.7.4
-          bundler-version: 2.2.11
-          bundler-cache: true
-      - name: Install Node.js and Yarn
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-          cache: 'yarn'
-      - name: Install packages with Yarn
-        run: yarn install
-      - name: Setup environment variables
+          node-version: "16.13"
+
+      - name: Install yarn
+        run: npm install -g yarn
+
+      - name: Force Bundler Version
         run: |
-          echo "RAILS_ENV=test" >> $GITHUB_ENV
-          echo "DATABASE_URL=postgres://postgres:password@localhost:5432/app_test" >> $GITHUB_ENV
-      - name: Create database
-        run: rails db:create
-      - name: Run database migrations
-        run: rails db:migrate
-      - name: Run tests
+          echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+          source $BASH_ENV
+          gem install bundler
+
+      - name: Bundle Install
+        run: |
+          bundle config set path 'vendor/bundle'
+          bundle install --jobs 4 --retry 3
+
+      - name: Wait for DB
+        run: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - name: Database setup
+        run: bin/rails db:{drop,create,migrate,seed} --trace
+
+      - name: Run rspec in parallel
         run: bundle exec rspec
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results/
