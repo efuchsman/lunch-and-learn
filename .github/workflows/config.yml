@@ -1,64 +1,44 @@
-name: Build and Test
-
+# This workflow uses actions that are not certified by GitHub.  They are
+# provided by a third-party and are governed by separate terms of service,
+# privacy policy, and support documentation.
+#
+# This workflow will install a prebuilt Ruby version, install dependencies, and
+# run tests and linters.
+name: "Ruby on Rails CI"
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 jobs:
-  build-and-test:
+  test:
     runs-on: ubuntu-latest
-
     services:
-      postgres:
+      db:
         image: postgres:latest
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: lunch_and_learn_test
-        ports:
-          - 5432/tcp
+        ports: ['5432:5432']
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.6.1
+      - uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
         with:
-          node-version: "16.13"
-
-      - name: Install yarn
-        run: npm install -g yarn
-
-      - name: Force Bundler Version
+          ruby-version: 2.7.4
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - name: Build and run tests
+        env:
+          RAILS_ENV: test
+          DATABASE_URL: "postgres://postgres:@localhost:5432/test"
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: |
-          echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-          source $BASH_ENV
+          sudo apt-get -yqq install libpq-dev
           gem install bundler
-
-      - name: Bundle Install
-        run: |
-          bundle config set path 'vendor/bundle'
           bundle install --jobs 4 --retry 3
-
-      - name: Wait for DB
-        run: dockerize -wait tcp://localhost:5432 -timeout 1m
-
-      - name: Database setup
-        run: bin/rails db:{drop,create,migrate,seed} --trace
-
-      - name: Run rspec in parallel
-        run: bundle exec rspec
-
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: test-results/
+          bundle exec rails db:setup
+          bundle exec rspec
