@@ -14,14 +14,7 @@ class Api::V1::RecipesController < ApplicationController
     end
 
     if country.blank?
-      recipes = RecipeFacade.recipes_by_country(RestCountriesFacade.random_country.name)
-      if recipes.blank?
-        render json: { data: "You Have Opted For A Random Country But There Are Currently No Recipes For This Country. It Is Strongly Suggested That A User Provides A Country Parameter For Optimal Performance." }
-      elsif recipes == "Usage limits are exceeded"
-        render json: { error: "Too Many API calls. Please Wait A Minute Before Trying Again. It Is Strongly Suggested That A User Provides A Country Parameter For Optimal Performance." }, status: 429
-      else
-        render json:RecipeSerializer.new(recipes)
-      end
+      render json: { error: "Please Provide A Country Parameter" }, status: 400
     end
   end
 end
