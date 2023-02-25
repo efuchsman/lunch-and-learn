@@ -38,6 +38,10 @@ jobs:
           RAILS_ENV: test
           DATABASE_URL: "postgres://postgres:@localhost:5432/test"
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+          edamam_api_key: ${{ secrets.EDAMAM_API_KEY }}
+          edamam_app_id: ${{ secrets.EDAMAM_APP_ID }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          unsplash_access_key: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           sudo apt-get -yqq install libpq-dev
           gem install bundler
