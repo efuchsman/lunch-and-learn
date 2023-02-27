@@ -115,43 +115,36 @@ Response:
 
 ## Learning Resources
 
-### GET /api/v1/learning_resources?country=scotland
+### GET /api/v1/learning_resources?country=belgium
 
 Respone:
 
 ```
 {
-  "data": {
+   "data": {
       "id": null,
       "type": "learning_resource",
       "attributes": {
-          "country": "scotland",
-          "video": {
-          "title": "A Super Quick History of Northern Ireland",
-          "youtube_video_id": "IU0tzcgcb-Q"
-      },
-      "images": [
-          {
-              "alt_tag": "green grass on mountain under white cloudy sky",
-              "url": "https://images.unsplash.com/photo-1551801691-f0bce83d4f68?..."
+         "country": "Belgium",
+         "video": {
+            "title": "A Super Quick History of Belgium",
+            "youtube_video_id": "R6-eMN5En4g"
           },
-          {
-              "alt_tag": "gray concrete building near lake under white sky during daytime",
-              "url": "https://images.unsplash.com/photo-1589489873423-d1745278a8f4?..."
-          },
-          {
-              "alt_tag": "brown ox on mountain",
-              "url": "https://images.unsplash.com/photo-1493962853295-0fd70327578a?..."
-          },
-          {
-              "alt_tag": "bird's eye photography of winding road on mountain",
-              "url": "https://images.unsplash.com/photo-1476990789491-712b869b91a5?..."
-          },
+          "images": [
+              {
+                  "alt_tag": "assorted-color of houses near lake",
+                  "url": "https://images.unsplash.com/photo-1491557345352-5929e343eb89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzOTk0NjN8MHwxfHNlYXJjaHwxfHxCZWxnaXVtfGVufDB8fHx8MTY3NzUzOTg0Mg&ixlib=rb-4.0.3&q=80&w=1080"
+              },
+              {
+                  "alt_tag": "gray and brown building under blue sky",
+                  "url": "https://images.unsplash.com/photo-1461838239441-4475121c0b7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzOTk0NjN8MHwxfHNlYXJjaHwyfHxCZWxnaXVtfGVufDB8fHx8MTY3NzUzOTg0Mg&ixlib=rb-4.0.3&q=80&w=1080"
+              },
           {...},
-          {...}
-         ]
+          {...},
+
+              ]
+          }
       }
-    }
   }
 ```
 
