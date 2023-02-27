@@ -82,37 +82,6 @@ Response:
   }
 ```
 
-### GET /api/v1/recipes
-
-Response:
-
-```
-{
-  "data": [
-    {
-      "id": null,
-      "type": "recipe",
-      "attributes": {
-        "title": "Vermouth Cocktail Recipe",
-        "url": "http://www.seriouseats.com/recipes/2011/01/vermouth-cocktail-recipe.html",
-        "country": "Country of curaçao",
-        "image": "https://edamam-product-images.s3.amazonaws.com/web-img/b5f/b5f1c16f0e8a0b3144c3b1b00fcc2567.jpg?..."
-      }
-    },
-    {
-      "id": null,
-      "type": "recipe",
-      "attributes": {
-        "title": "Mai Tai",
-        "url": "https://www.epicurious.com/recipes/food/views/mai-tai-51172000",
-        "country": "Country of curaçao",
-        "image": "https://edamam-product-images.s3.amazonaws.com/web-img/4db/4db61c7e0deb6f8ac2873ba72991665d.jpg?..."
-      }
-    }
-  ]
-}
-```
-
 ## Learning Resources
 
 ### GET /api/v1/learning_resources?country=belgium
